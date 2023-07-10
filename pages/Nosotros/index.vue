@@ -38,7 +38,7 @@
       },
       head(){
         return {
-          title: "Agrikol  | About"
+          title: "LACTIRED  | NOSOTROS"
         }
       }
     }

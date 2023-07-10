@@ -6,7 +6,7 @@
         <carousel :items="1" :autoplay="true" :nav="false">
       <!-- Slide Item -->
       <div class="slide-item">
-        <div class="image-layer" style="background-image: url(/assets/images/main-slider/slide_v2_1.jpg);">
+        <div class="image-layer" style="background-image: url(/assets/images/sliders/img1.jpg);">
         </div>
         <div class="auto-container">
           <div class="content-box">
@@ -26,7 +26,7 @@
       </div>
       <!-- Slide Item -->
       <div class="slide-item">
-        <div class="image-layer" style="background-image: url(/assets/images/main-slider/slide_v2_2.jpg);">
+        <div class="image-layer" style="background-image: url(/assets/images/sliders/img2.jpg);">
         </div>
         <div class="auto-container">
           <div class="content-box">
@@ -46,7 +46,7 @@
       </div>
       <!-- Slide Item -->
       <div class="slide-item">
-        <div class="image-layer" style="background-image: url(/assets/images/main-slider/slide_v2_1.jpg);">
+        <div class="image-layer" style="background-image: url(/assets/images/sliders/img3.jpg);">
         </div>
         <div class="auto-container">
           <div class="content-box">

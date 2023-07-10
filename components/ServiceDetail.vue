@@ -1,94 +1,97 @@
 <template>
   <section class="service_detail">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-4 col-lg-4">
-          <div class="service_details_left">
-            <ul class="list-unstyled service_all_list">
-              <li><a href="#">All Services</a></li>
-              <li class="active"><a href="#">Fresh Vegetables</a></li>
-              <li><a href="#">Agriculture Products</a></li>
-              <li><a href="#">Organic Products</a></li>
-              <li><a href="#">Dairy Products</a></li>
-            </ul>
-            <div class="need_help_box">
-              <h2>Need Help?</h2>
-              <p>Speak with a human to filling out a form? call corporate office and we will connect
-                you with a team member who can help.</p>
-              <h3><span class="icon-phone-call"></span>666 888 0000</h3>
-            </div>
-            <div class="download_file_box">
-              <a href="#"><i class="icon-pdf"></i>Download PDF File</a>
+
+
+    <template v-if="planta">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4">
+            <div class="service_details_left">
+              <ul class="list-unstyled service_all_list">
+                <li><a href="#">
+                    {{ planta.ubigeo.ubig_departamento }}, {{ planta.ubigeo.ubig_provincia }}, {{
+                      planta.ubigeo.ubig_distrito }}
+                  </a></li>
+                <li class="active"><a href="#">
+                    {{ planta.institucion.inst_nombre }} - {{ planta.institucion.inst_naturaleza }}
+                  </a></li>
+                <li><a href="#">Tipo de planta: {{ planta.plan_tipo_planta }} </a></li>
+
+              </ul>
+              <div class="need_help_box">
+                <h2>Nesesitas ayuda?</h2>
+                <p>Si necesitas ayuda adicional, ¡no dudes en contactarnos! Estamos aquí para atenderte de la mejor manera
+                  posible..</p>
+                <h3><span class="icon-phone-call"></span>951 888 0000</h3>
+              </div>
+
             </div>
           </div>
-        </div>
-        <div class="col-xl-8 col-lg-8">
-          <div class="service_details_right">
-            <div class="service_details_One_img">
-              <img src="/assets/images/service/service-detail_img_1.jpg" alt="">
-            </div>
-            <div class="harvest_innovations">
-              <h2>Harvest Innovations</h2>
-              <p>There are many variations of passages of psum available, but the majority have
-                suffered alteration in some form, by injected humour, or randomised words which
-                don't look even slightly believable. If you are going to use a passage of Lorem
-                Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of
-                text. Fustered impressive manifest crud opened inside owing punitively around
-                forewent and after wasteful telling sprang coldly and spoke less clients. Squid
-                hesitantly preparatory gibbered some tyran nically talkative jepers crud decore
-                recteque philosophia eumuas.</p>
-
-              <p class="harvest_innovations_bottom_text">Beyond more stoic this along goodness hey
-                this this wow manatee mongoose one as since a far flustered impressive manifest far
-                crud opened inside owing punitively around forewent and after wasteful telling
-                sprang coldly and spoke less clients. Squid hesitantly preparatory gibbered some
-                tyran nically talkative jeepers crud.</p>
-
-            </div>
-            <div class="row">
-              <div class="col-xl-6 col-lg-6">
-                <div class="service_details_single_img_box">
-                  <img src="/assets/images/service/service-detail_img_2.jpg" alt="">
-                </div>
+          <div class="col-xl-8 col-lg-8">
+            <div class="service_details_right">
+              <h2 class="text-bold">
+                {{ planta.plan_razon_social }}
+              </h2>
+              <div class="service_details_One_img">
+                <img src="/assets/images/planta/demo.jpg" alt="">
               </div>
-              <div class="col-xl-6 col-lg-6">
-                <div class="service_details_single_img_box">
-                  <img src="/assets/images/service/service-detail_img_3.jpg" alt="">
-                </div>
+              <div class="harvest_innovations">
+
+                <p>Somos una planta de acopio de leche y productora de queso comprometida con la excelencia y la calidad
+                  en la industria láctea. Nuestro objetivo es ofrecer productos lácteos frescos, deliciosos y nutritivos a
+                  nuestros clientes.</p>
+
+                <p class="harvest_innovations_bottom_text">En nuestra planta, trabajamos en estrecha colaboración con los
+                  productores locales para asegurar el suministro de leche fresca y de alta calidad. Valoramos la relación
+                  cercana y de confianza que hemos establecido con nuestros proveedores a lo largo de los años..</p>
+
+                <p>
+                  Contamos con un equipo altamente capacitado y apasionado, conformado por expertos en la industria
+                  láctea. Nos esforzamos por mantenernos al día con las últimas tecnologías y prácticas de producción para
+                  garantizar la máxima eficiencia y calidad en nuestros procesos.
+                </p>
+
+                <p>
+
+                  La calidad es un aspecto fundamental de nuestra planta. Implementamos estrictos controles de calidad en
+                  cada etapa, desde la recepción de la leche cruda hasta el empaquetado final del queso. Nos aseguramos de
+                  cumplir con las normas y regulaciones sanitarias para garantizar la inocuidad de nuestros productos.
+
+                  Además de nuestra pasión por los productos lácteos de calidad, también nos preocupamos por el medio
+                  ambiente y la sostenibilidad. Implementamos prácticas responsables en nuestras operaciones para
+                  minimizar nuestro impacto en el entorno y promover la conservación de los recursos naturales.
+
+                  Estamos comprometidos con la satisfacción total de nuestros clientes. Nos esforzamos por superar sus
+                  expectativas y ofrecerles productos lácteos frescos y sabrosos en todo momento. Valoramos su confianza
+                  en nosotros y trabajamos arduamente para mantenerla.
+
+                  En resumen, somos una planta de acopio de leche y productora de queso dedicada a brindar productos
+                  lácteos de calidad, respaldados por la experiencia de nuestro equipo, la excelencia en nuestros procesos
+                  y el compromiso con la satisfacción de nuestros clientes.
+                </p>
+
               </div>
+
             </div>
-            <div class="agriculture_solutions">
-              <h3>Agriculture Solutions</h3>
-              <p>Lorem ipsum is simply free text used by copytyping refreshing. Neque porro est qui
-                dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta
-                sunt explicabo. Aelltes port lacus quis enim var sed efficitur turpis gilla sed sit
-                amet finibus eros. Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.</p>
-            </div>
-            <ul class="list-unstyled">
-              <li><i class="fa fa-check"></i>Research beyond the business plan</li>
-              <li><i class="fa fa-check"></i>Marketing options and rates</li>
-              <li><i class="fa fa-check"></i>The ability to turnaround consulting</li>
-              <li><i class="fa fa-check"></i>Help companies into more profitable</li>
-            </ul>
-            <p class="service_details_last_text">Lorem Ipsum has been the ndustry standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-              make a type specimen book. It has survived not only five centuries.</p>
           </div>
         </div>
       </div>
-    </div>
+    </template>
   </section>
 </template>
 
 <script>
-    import FaqOne from "./FaqOne";
-    export default {
-        name: "ServiceDetail",
-      components: {FaqOne}
+import FaqOne from "./FaqOne";
+export default {
+  name: "ServiceDetail",
+  components: { FaqOne },
+  props: {
+    planta: {
+      type: Object,
+      default: null
     }
+  }
+}
+
+
 </script>
-
-<style scoped>
-
-</style>

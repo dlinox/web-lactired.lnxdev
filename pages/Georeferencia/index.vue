@@ -1,26 +1,33 @@
 <template>
     <div>
         <Header />
-
         <div id="map" ref="map" class="map-container">
             <l-map :zoom="zoom" :center="center">
                 <!-- @click="handleMapClick" -->
                 <l-tile-layer :url="tileLayerUrl"></l-tile-layer>
                 <l-polygon :lat-lngs="peruCoordinates" :fillOpacity="0.1" />
-                <template v-for="(ubicacion, index) in ubicaciones">
+                <template v-for="(planta, index) in plantas">
 
 
-                    <l-circle-marker :lat-lng="ubicacion.latLng" :color="ubicacion.color" :fill="true"
-                        :fillColor="ubicacion.color">
+                    <l-circle-marker :lat-lng="[planta.plan_latitud, planta.plan_longitud]" color="red" :fill="true"
+                        fillColor="red">
 
                         <l-popup>
                             <div class="card bg-white border-white">
                                 <div class="card-header bg-white border-white">
-                                    {{ ubicacion.nombre }}
+                                    {{ planta.plan_razon_social }}
                                 </div>
                                 <div class="card-body ">
 
-                                    
+
+                                    <nuxt-link :to="'/plantas/' + planta.plan_id">
+                                        <span class="icon-left-arrow">
+                                            Ver detalles de la planta
+                                        </span>
+                                    </nuxt-link>
+
+
+
                                 </div>
                             </div>
                         </l-popup>
@@ -56,11 +63,12 @@ export default {
     },
     head() {
         return {
-            title: "Agrikol  | Contact"
+            title: "LACTIRED  | GEOREFERENCIA"
         }
     },
     data() {
         return {
+            plantas: [],
             zoom: 7,
             center: [-15.833333, -70.033333],
             tileLayerUrl: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -182,7 +190,23 @@ export default {
             });
             console.log(this.clickedCoordinates);
         },
+
+        async getPlantas() {
+            let res = await fetch('https://app-lactired.lnxdev.net.pe/api/plantas');
+            let json = await res.json();
+
+            console.log(json);
+            this.plantas = json;
+        }
+
     },
+
+    async created() {
+
+        await this.getPlantas();
+
+    }
+
 
 };
 </script>

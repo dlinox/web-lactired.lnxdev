@@ -4,8 +4,8 @@
             <div class="container">
                 <div class="topbar_two_content clearfix">
                     <div class="logo-box-two float-left">
-                        <a href="/index2" class="main-nag__logo">
-                            <img src="/assets/images/resources/logo.png" alt="" />
+                        <a href="/index2" class="main-nag__logo py-3">
+                            <img src="/assets/images/resources/logo.svg" alt="" />
                         </a>
                     </div>
                     <div class="header_address_two float-left">
@@ -59,7 +59,7 @@
                         <div class="main-nav__main-navigation two float-left">
                             <ul class="main-nav__navigation-box">
                                 <li class="dropdown current">
-                                    <nuxt-link to="/home">Inicio</nuxt-link>
+                                    <nuxt-link to="/">Inicio</nuxt-link>
                                 </li>
                                 <li class="dropdown">
                                     <nuxt-link to="/plantas">Plantas</nuxt-link>
@@ -107,7 +107,7 @@
                     </li>
 
                     <li class="dropdown">
-                        <nuxt-link to="/service">Plantas</nuxt-link>
+                        <nuxt-link to="/plantas">Plantas</nuxt-link>
                     </li>
 
 
@@ -119,20 +119,20 @@
                             </button>
                         </div>
                         <ul>
-                            <li><nuxt-link to="/projects">Productores</nuxt-link></li>
-                            <li><nuxt-link to="/projects_detail">Plantas</nuxt-link></li>
-                            <li><nuxt-link to="/projects_detail">Acopiadores</nuxt-link></li>
+                            <li><nuxt-link to="/">Productores</nuxt-link></li>
+                            <li><nuxt-link to="#">Plantas</nuxt-link></li>
+                            <li><nuxt-link to="#">Acopiadores</nuxt-link></li>
                         </ul>
                     </li>
                     <li>
-                        <nuxt-link to="/contact">Productos</nuxt-link>
+                        <nuxt-link to="/productos">Productos</nuxt-link>
                     </li>
 
                     <li>
-                        <nuxt-link to="/contact">Nosotros</nuxt-link>
+                        <nuxt-link to="/nosotros">Nosotros</nuxt-link>
                     </li>
                     <li>
-                        <nuxt-link to="/contact">Contactanos</nuxt-link>
+                        <nuxt-link to="/contactanos">Contactanos</nuxt-link>
                     </li>
                 </ul>
             </nav>

@@ -1,53 +1,58 @@
 <template>
   <div>
-    <Nav />
-    <Slider />
-    <AboutOne />
-    <ServiceOne />
-    <BrandOne />
-    <FeaturedOne />
-    <VideoOne />
-    <TestimonialOne />
+    <Header />
+    <SliderTwo />
+    <NeedAll />
+    <ServiceTwo />
+    <CallToActionTwo />
+    <ProductTwo />
     <RecentProject />
-    <Benefits />
-    <ProductOne />
-    <BlogOne />
-    <CallToActionOne />
-    <Footer />
+    <TestimonialTwo />
+    <VideoOne />
+    <BrandTwo />
+    <GetQuote />
+    <GMap />
+    <GalleryOne />
+    <FooterTwo />
   </div>
 </template>
 
 <script>
-import Slider from "../components/Slider";
-import Nav from "../components/Nav";
-import AboutOne from "../components/AboutOne";
-import ServiceOne from "../components/ServiceOne";
-import BrandOne from "../components/BrandOne";
-import FeaturedOne from "../components/FeaturedOne";
-import VideoOne from "../components/VideoOne";
-import TestimonialOne from "../components/TestimonialOne";
-import RecentProject from "../components/RecentProject";
-import Benefits from "../components/Benefits";
-import ProductOne from "../components/ProductOne";
-import BlogOne from "../components/BlogOne";
-import CallToActionOne from "../components/CallToActionOne";
-import Footer from "../components/Footer";
+import FooterTwo from "@/components/FooterTwo";
+import Header from "@/components/Header";
+import SliderTwo from "@/components/SliderTwo";
+import NeedAll from "@/components/NeedAll";
+import CallToActionTwo from "@/components/CallToActionTwo";
+import ProductTwo from "@/components/ProductTwo";
+import RecentProject from "@/components/RecentProject";
+import TestimonialTwo from "@/components/TestimonialTwo";
+import VideoOne from "@/components/VideoOne";
+import BrandTwo from "@/components/BrandTwo";
+import GetQuote from "@/components/GetQuote";
+import GMap from "@/components/GMap";
+import GalleryOne from "@/components/GalleryOne";
+import ServiceTwo from "@/components/ServiceTwo";
 export default {
   components: {
-    Footer,
-    CallToActionOne,
-    BlogOne,
-    ProductOne,
-    Benefits,
-    RecentProject,
-    TestimonialOne,
+    ServiceTwo,
+    GalleryOne,
+    GMap,
+    GetQuote,
+    BrandTwo,
     VideoOne,
-    FeaturedOne,
-    BrandOne,
-    ServiceOne,
-    AboutOne,
-    Slider,
-    Nav,
+    TestimonialTwo,
+    RecentProject,
+    ProductTwo,
+    CallToActionTwo,
+    NeedAll,
+    SliderTwo,
+    Header,
+    FooterTwo,
   },
-};
+  head() {
+    return {
+      title: "LACTIRED  | INICIO"
+    }
+  }
+}
 </script>

@@ -23,7 +23,7 @@
 },
       head(){
         return {
-          title: "Agrikol  | Products"
+          title: "LACTIRED  | INSUMOS"
         }
       }
     }
