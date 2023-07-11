@@ -3,7 +3,8 @@
     <Header />
     <PageHeader title="Detalles de la planta" />
     <ServiceDetail :planta="planta" />
-    <Footer />
+    <ServiceOne  :productos="productos" />
+    <Footer  />
   </div>
 </template>
 <script>
@@ -11,13 +12,15 @@ import Header from "@/components/Header";
 import PageHeader from "@/components/PageHeader";
 import ServiceDetail from "@/components/ServiceDetail";
 import Footer from "@/components/Footer";
+import ServiceOne from "@/components/ServiceOne";
 
 export default {
   components: {
     Footer,
     ServiceDetail,
     PageHeader,
-    Header
+    Header,
+    ServiceOne
   },
   head() {
     return {
@@ -27,6 +30,7 @@ export default {
   data: () => ({
     planta: null,
     loading: false,
+    productos: null,
   }),
 
   async created() {
@@ -34,9 +38,12 @@ export default {
 
     let res = await fetch('https://app-lactired.lnxdev.net.pe/api/planta/' + this.$route.params.id);
     let json = await res.json();
-    console.log(json);
     this.planta = json;
 
+
+    let prods = await fetch('https://app-lactired.lnxdev.net.pe/api/planta/productos/' + this.$route.params.id);
+    let jsonp = await prods.json();
+    this.productos = jsonp;
     this.loading = false;
   }
 }

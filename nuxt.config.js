@@ -52,7 +52,7 @@ export default {
   plugins: [
     { src: 'plugins/owl.js', ssr: false },
     { src: 'plugins/leaflet.js', ssr: false },
-    { src: 'plugins/axios.js', ssr: false },
+    // { src: 'plugins/axios.js', ssr: false },
 
   ],
   /*
